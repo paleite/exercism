@@ -1,23 +1,14 @@
-const sortAlphabetically = (word: string) => word.split("").sort().join("");
+// ~/exercism/javascript/anagram/anagram.js
+const s = (x: string) => x.split("").sort().join("");
 
-const hasSameLetters = (a: string, b: string) =>
-  sortAlphabetically(a) === sortAlphabetically(b);
+const z = (x: string) =>
+  ((x: string) =>
+    (
+      (x: string) => (y: string) => (z: string) =>
+        (
+          (x: string) => (y: string) => (z: string) =>
+            x !== z && y === s(z)
+        )(x)(y)(z.toLowerCase())
+    )(x)(s(x)))(x.toLowerCase());
 
-const isEqual = (targetWord: string, candidateWord: string) =>
-  targetWord === candidateWord;
-
-const isValidAnagram = (targetWord: string, candidateWord: string) =>
-  !isEqual(targetWord, candidateWord) &&
-  hasSameLetters(targetWord, candidateWord);
-
-const isAnagramFor = (targetWord: string) => {
-  const targetWordLower = targetWord.toLowerCase();
-
-  return (candidateWord: string): boolean =>
-    isValidAnagram(targetWordLower, candidateWord.toLowerCase());
-};
-
-const findAnagrams = (targetWord: string, candidateWords: string[]) =>
-  candidateWords.filter(isAnagramFor(targetWord));
-
-export { findAnagrams };
+export const findAnagrams = (x: string, y: string[]) => y.filter(z(x));
