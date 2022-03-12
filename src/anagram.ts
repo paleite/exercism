@@ -1,20 +1,23 @@
 const sortAlphabetically = (word: string) => word.split("").sort().join("");
 
-const findAnagrams = (targetWord: string, candidateWords: string[]) => {
-  const targetWordLower = targetWord.toLowerCase();
-  const targetWordComparable = sortAlphabetically(targetWordLower);
+const hasSameLetters = (a: string, b: string) =>
+  sortAlphabetically(a) === sortAlphabetically(b);
 
-  return candidateWords.filter((candidateWord) => {
-    const candidateWordLower = candidateWord.toLowerCase();
-    const candidateWordComparable = sortAlphabetically(candidateWordLower);
-    if (targetWordLower === candidateWordLower) {
-      return false;
-    }
-    if (targetWordComparable === candidateWordComparable) {
-      return true;
-    }
-    return false;
-  });
+const isEqual = (targetWord: string, candidateWord: string) =>
+  targetWord === candidateWord;
+
+const isValidAnagram = (targetWord: string, candidateWord: string) =>
+  !isEqual(targetWord, candidateWord) &&
+  hasSameLetters(targetWord, candidateWord);
+
+const isAnagramFor = (targetWord: string) => {
+  const targetWordLower = targetWord.toLowerCase();
+
+  return (candidateWord: string): boolean =>
+    isValidAnagram(targetWordLower, candidateWord.toLowerCase());
 };
+
+const findAnagrams = (targetWord: string, candidateWords: string[]) =>
+  candidateWords.filter(isAnagramFor(targetWord));
 
 export { findAnagrams };
