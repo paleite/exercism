@@ -1,6 +1,7 @@
 {
   "name": "--rename-me--",
   "workspaces": [
+    "javascript/*",
     "typescript/*"
   ],
   "version": "1.0.0",
