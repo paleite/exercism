@@ -1,4 +1,5 @@
 type Dna = keyof typeof dnaToRnaMapping;
+type Rna = typeof dnaToRnaMapping[Dna];
 
 const dnaToRnaMapping = {
   G: "C",
@@ -13,7 +14,7 @@ function assertDna(dna: string): asserts dna is Dna {
   }
 }
 
-const toRna = (dna: string): "C" | "G" | "A" | "U" => {
+const toRna = (dna: string): Rna => {
   assertDna(dna);
   return dnaToRnaMapping[dna];
 };
