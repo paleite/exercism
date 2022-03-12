@@ -1,19 +1,23 @@
-const dnaToRna = {
+type Dna = keyof typeof dnaToRnaMapping;
+
+const dnaToRnaMapping = {
   G: "C",
   C: "G",
   T: "A",
   A: "U",
-};
+} as const;
 
-function assertRna(x: string): asserts x is keyof typeof dnaToRna {
-  if (!(x in dnaToRna)) {
+function assertDna(dna: string): asserts dna is Dna {
+  if (!(dna in dnaToRnaMapping)) {
     throw Error("Invalid input DNA.");
   }
 }
 
-export function toRna(x: string): string {
-  return x
-    .split("")
-    .map((y) => (assertRna(y), dnaToRna[y]))
-    .join("");
-}
+const toRna = (dna: string): "C" | "G" | "A" | "U" => {
+  assertDna(dna);
+  return dnaToRnaMapping[dna];
+};
+
+const toRnaAll = (dna: string): string => dna.split("").map(toRna).join("");
+
+export { toRnaAll as toRna };
