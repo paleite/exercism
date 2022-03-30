@@ -1,4 +1,4 @@
-type Roster = { [grade: number]: readonly string[] }
+type Roster = Record<number, readonly string[]>
 
 export class GradeSchool {
   #_roster: Roster = {}
