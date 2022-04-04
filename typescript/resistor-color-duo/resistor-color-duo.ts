@@ -9,12 +9,12 @@ const resistance = {
   violet: 7,
   grey: 8,
   white: 9,
-};
+}
 
-type Color = keyof typeof resistance;
+type Color = keyof typeof resistance
 
 export const decodedValue = ([colorA, colorB]: [
   Color,
   Color,
   ...Color[]
-]): number => parseInt(`${resistance[colorA]}${resistance[colorB]}`);
+]): number => parseInt(`${resistance[colorA]}${resistance[colorB]}`)

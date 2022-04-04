@@ -69,8 +69,8 @@ There is a single test inside:
 
 ```typescript
 it("says hello world", () => {
-  expect(hello()).toEqual("Hello, World!");
-});
+  expect(hello()).toEqual("Hello, World!")
+})
 ```
 
 Run the test now, with the following command on the command-line:
@@ -120,7 +120,7 @@ So let's check now this function in the `hello-worlds.ts` file:
 
 ```typescript
 export function hello(): string {
-  return "Goodbye, Mars!";
+  return "Goodbye, Mars!"
 }
 ```
 
@@ -128,7 +128,7 @@ Now we see that the function returns the incorrect string, which is the reason f
 
 ```typescript
 export function hello(): string {
-  return "Hello, World!";
+  return "Hello, World!"
 }
 ```
 

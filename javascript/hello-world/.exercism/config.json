@@ -1,7 +1,5 @@
 {
-  "authors": [
-    "rchavarria"
-  ],
+  "authors": ["rchavarria"],
   "contributors": [
     "austinratcliff",
     "designfrontier",
@@ -13,15 +11,9 @@
     "tejasbubane"
   ],
   "files": {
-    "solution": [
-      "hello-world.js"
-    ],
-    "test": [
-      "hello-world.spec.js"
-    ],
-    "example": [
-      ".meta/proof.ci.js"
-    ]
+    "solution": ["hello-world.js"],
+    "test": ["hello-world.spec.js"],
+    "example": [".meta/proof.ci.js"]
   },
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
   "source": "This is an exercise to introduce users to using Exercism",

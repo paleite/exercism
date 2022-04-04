@@ -1,4 +1,4 @@
-type Planet = keyof typeof orbitalPeriod;
+type Planet = keyof typeof orbitalPeriod
 
 const orbitalPeriod = {
   mercury: 0.2408467,
@@ -9,7 +9,7 @@ const orbitalPeriod = {
   saturn: 29.447498,
   uranus: 84.016846,
   neptune: 164.79132,
-} as const;
+} as const
 
 export const age = (planet: Planet, seconds: number): number =>
-  Math.round((seconds / orbitalPeriod[planet] / 31557600) * 100) / 100;
+  Math.round((seconds / orbitalPeriod[planet] / 31557600) * 100) / 100

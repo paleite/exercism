@@ -35,4 +35,4 @@ module.exports = {
       extends: "@exercism/eslint-config-typescript/maintainers",
     },
   ],
-};
+}

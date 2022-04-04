@@ -9,8 +9,8 @@ const COLORS = [
   "violet",
   "grey",
   "white",
-] as const;
+] as const
 
-const colorCode = (x: typeof COLORS[number]): number => COLORS.indexOf(x);
+const colorCode = (x: typeof COLORS[number]): number => COLORS.indexOf(x)
 
-export { colorCode, COLORS };
+export { colorCode, COLORS }

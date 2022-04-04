@@ -1,1 +1,9 @@
-{"track":"javascript","exercise":"hello-world","id":"3fea595466fe477db17f816c07824230","url":"https://exercism.org/tracks/javascript/exercises/hello-world","handle":"paleite","is_requester":true,"auto_approve":false}
+{
+  "track": "javascript",
+  "exercise": "hello-world",
+  "id": "3fea595466fe477db17f816c07824230",
+  "url": "https://exercism.org/tracks/javascript/exercises/hello-world",
+  "handle": "paleite",
+  "is_requester": true,
+  "auto_approve": false
+}

@@ -1,18 +1,18 @@
-import { colorCode, COLORS } from "./resistor-color";
+import { colorCode, COLORS } from "./resistor-color"
 
 describe("color code", () => {
   it("Black", () => {
-    expect(colorCode("black")).toEqual(0);
-  });
+    expect(colorCode("black")).toEqual(0)
+  })
 
   it("White", () => {
-    expect(colorCode("white")).toEqual(9);
-  });
+    expect(colorCode("white")).toEqual(9)
+  })
 
   it("Orange", () => {
-    expect(colorCode("orange")).toEqual(3);
-  });
-});
+    expect(colorCode("orange")).toEqual(3)
+  })
+})
 
 describe("Colors", () => {
   it("returns all colors", () => {
@@ -27,6 +27,6 @@ describe("Colors", () => {
       "violet",
       "grey",
       "white",
-    ]);
-  });
-});
+    ])
+  })
+})
