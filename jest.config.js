@@ -1,1 +1,1 @@
-module.exports = require("@paleite/jest-config").base;
+module.exports = require("@paleite/jest-config").base

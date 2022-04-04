@@ -24,7 +24,7 @@
     "clean": "tsc --build tsconfig.build.json --clean",
     "format": "prettier --write .",
     "postinstall": "yarn build",
-    "lint": "eslint --cache --ext .js,.ts,.tsx --fix .",
+    "lint": "lerna run lint -- --cache",
     "prepare": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
@@ -35,6 +35,10 @@
     "typecheck": "tsc --project tsconfig.json"
   },
   "devDependencies": {
+    "@babel/eslint-parser": ">=7.11.0",
+    "@babel/core": ">=7.11.0",
+    "@babel/eslint-plugin": "^7.17.7",
+    "@exercism/babel-preset-javascript": "^0.1.2",
     "@paleite/eslint-config": "^1.0.0",
     "@paleite/eslint-config-base": "^1.0.0",
     "@paleite/eslint-config-typescript": "^1.0.0",
@@ -55,6 +59,7 @@
     "eslint-plugin-unicorn": "^41.0.1",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
+    "lerna": "^4.0.0",
     "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
     "pretty-quick": "^3.1.3",

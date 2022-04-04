@@ -5,4 +5,4 @@ module.exports = {
     project: ["./tsconfig.json", "./tsconfig.eslint.json"],
     tsconfigRootDir: __dirname,
   },
-};
+}
