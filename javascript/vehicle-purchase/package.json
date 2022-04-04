@@ -4,11 +4,7 @@
   "author": "Franziska Obbarius <12543047+junedev@users.noreply.github.com>",
   "private": true,
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/concept/vehicle-purchase"
-  },
+  "repository": "https://github.com/exercism/javascript",
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@exercism/babel-preset-javascript": "^0.1.2",
@@ -25,5 +21,7 @@
     "test": "jest ./*",
     "watch": "jest --watch ./*",
     "lint": "eslint ."
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js"
 }
