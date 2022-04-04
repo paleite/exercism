@@ -1,1 +1,5 @@
-module.exports = { ...require("@paleite/prettier-config"), semi: false }
+module.exports = {
+  ...require('@paleite/prettier-config'),
+  semi: false,
+  singleQuote: true,
+}
