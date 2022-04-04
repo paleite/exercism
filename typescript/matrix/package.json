@@ -1,15 +1,18 @@
 {
   "name": "@exercism/typescript-matrix",
   "version": "1.0.0",
-  "description": "Exercism exercises in Typescript.",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/exercism/typescript"
-  },
+  "description": "Exercism exercises in Typescript.",
+  "repository": "https://github.com/exercism/typescript",
+  "license": "MIT",
+  "author": "(https://github.com/paleite)",
   "type": "module",
-  "engines": {
-    "node": "^14.13.1 || >=16.0.0"
+  "main": "index.js",
+  "scripts": {
+    "lint": "yarn lint:types && yarn lint:ci",
+    "lint:ci": "eslint . --ext .tsx,.ts",
+    "lint:types": "yarn tsc --noEmit -p .",
+    "test": "yarn lint:types && jest --no-cache"
   },
   "devDependencies": {
     "@exercism/babel-preset-typescript": "^0.1.0",
@@ -22,10 +25,7 @@
     "jest": "^27.5.1",
     "typescript": "^4.5.4"
   },
-  "scripts": {
-    "test": "yarn lint:types && jest --no-cache",
-    "lint": "yarn lint:types && yarn lint:ci",
-    "lint:types": "yarn tsc --noEmit -p .",
-    "lint:ci": "eslint . --ext .tsx,.ts"
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0"
   }
 }

@@ -1,13 +1,21 @@
 {
   "name": "@exercism/javascript-elyses-enchantments",
+  "version": "1.0.0",
+  "private": true,
   "description": "Exercism concept exercise on arrays",
+  "repository": "https://github.com/exercism/javascript",
+  "license": "MIT",
   "author": "Ovidiu Miu",
   "contributors": [
     "Derk-Jan Karrenbeld <derk-jan+git@karrenbeld.info> (https://derk-jan.com)"
   ],
-  "private": true,
-  "license": "MIT",
-  "repository": "https://github.com/exercism/javascript",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest ./*",
+    "watch": "jest --watch ./*"
+  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@exercism/babel-preset-javascript": "^0.1.2",
@@ -18,13 +26,5 @@
     "core-js": "^3.21.1",
     "eslint": "^8.12.0",
     "jest": "^27.5.0"
-  },
-  "dependencies": {},
-  "scripts": {
-    "test": "jest ./*",
-    "watch": "jest --watch ./*",
-    "lint": "eslint ."
-  },
-  "version": "1.0.0",
-  "main": "index.js"
+  }
 }

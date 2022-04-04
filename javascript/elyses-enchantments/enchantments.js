@@ -9,7 +9,7 @@
  * @returns {number} the card
  */
 export function getItem(cards, position) {
-  throw new Error("Implement the getItem function")
+  return cards.at(position)
 }
 
 /**
@@ -22,7 +22,9 @@ export function getItem(cards, position) {
  * @returns {number[]} the cards with the change applied
  */
 export function setItem(cards, position, replacementCard) {
-  throw new Error("Implement the setItem function")
+  cards.splice(position, 1, replacementCard)
+
+  return cards
 }
 
 /**
@@ -34,7 +36,9 @@ export function setItem(cards, position, replacementCard) {
  * @returns {number[]} the cards with the newCard applied
  */
 export function insertItemAtTop(cards, newCard) {
-  throw new Error("Implement the insertItemAtTop function")
+  cards.push(newCard)
+
+  return cards
 }
 
 /**
@@ -46,7 +50,9 @@ export function insertItemAtTop(cards, newCard) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItem(cards, position) {
-  throw new Error("Implement the removeItem function")
+  cards.splice(position, 1)
+
+  return cards
 }
 
 /**
@@ -57,7 +63,9 @@ export function removeItem(cards, position) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItemFromTop(cards) {
-  throw new Error("Implement the removeItemFromTop function")
+  cards.pop()
+
+  return cards
 }
 
 /**
@@ -69,7 +77,9 @@ export function removeItemFromTop(cards) {
  * @returns {number[]} the cards including the new card
  */
 export function insertItemAtBottom(cards, newCard) {
-  throw new Error("Implement the insertItemAtBottom function")
+  cards.unshift(newCard)
+
+  return cards
 }
 
 /**
@@ -80,7 +90,9 @@ export function insertItemAtBottom(cards, newCard) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItemAtBottom(cards) {
-  throw new Error("Implement the removeItemAtBottom function")
+  cards.shift()
+
+  return cards
 }
 
 /**
@@ -92,5 +104,5 @@ export function removeItemAtBottom(cards) {
  * @returns {boolean} true if there are exactly stackSize number of cards, false otherwise
  */
 export function checkSizeOfStack(cards, stackSize) {
-  throw new Error("Implement the checkSizeOfStack function")
+  return cards.length === stackSize
 }

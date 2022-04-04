@@ -1,15 +1,18 @@
 {
   "name": "@exercism/javascript-bob",
   "version": "1.0.0",
-  "description": "Exercism exercises in Javascript.",
-  "author": "Katrina Owen",
   "private": true,
+  "description": "Exercism exercises in Javascript.",
+  "repository": "https://github.com/exercism/javascript",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/exercism/javascript",
-    "directory": "exercises/practice/bob"
+  "author": "Katrina Owen",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest ./*",
+    "watch": "jest --watch ./*"
   },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@exercism/babel-preset-javascript": "^0.1.2",
@@ -20,11 +23,5 @@
     "core-js": "^3.21.1",
     "eslint": "^8.11.0",
     "jest": "^27.5.0"
-  },
-  "dependencies": {},
-  "scripts": {
-    "test": "jest ./*",
-    "watch": "jest --watch ./*",
-    "lint": "eslint ."
   }
 }
